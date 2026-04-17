@@ -13,12 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.Assert;
 
-public class FirstTest {
+public class SoftAssertion {
 
 	    WebDriver driver;
 	    public WebDriverWait wait;
+	    SoftAssert soft= new SoftAssert();
 	    @BeforeMethod
 	    public void beforeMethod() {
 	  	  System.out.println("Start the test");
@@ -32,10 +34,10 @@ public class FirstTest {
 	    }
 	    @Test
 	    public void title() {
-	    	String expect="STORE";
+	    	String expect="STORES";
 	    	String original=driver.getTitle();
-	    	Assert.assertEquals(original, expect);
-	    	System.out.println("the title is:"+driver.getTitle());
+	    	soft.assertEquals(original, expect, "the title is not same");
+	    	soft.assertAll();
 	    	}
 	    
 	    @Test
