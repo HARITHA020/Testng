@@ -23,14 +23,14 @@ public class FirstTest {
 	    public void beforeMethod() {
 	  	  System.out.println("Start the test");
 	  	  ChromeOptions options=new ChromeOptions();
-	  	  driver=new ChromeDriver(options);
 	  	  options.addArguments("--start-maximized");
-	  	  options.addArguments("--headless");
+	  	  driver=new ChromeDriver(options);
+	  	  //options.addArguments("--headless");
 	  	  driver.get("https://demoblaze.com/");
 	  	  wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	  	 // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    }
-	    @Test
+	    @Test(groups="groupA")
 	    public void title() {
 	    	String expect="STORE";
 	    	String original=driver.getTitle();
@@ -38,19 +38,20 @@ public class FirstTest {
 	    	System.out.println("the title is:"+driver.getTitle());
 	    	}
 	    
-	    @Test
+	    @Test(groups="groupA")
 	    public void validation() {
-	  	  driver.findElement(By.id("login2")).click();
-	  	  driver.findElement(By.id("loginusername")).sendKeys("admin");
-	  	  driver.findElement(By.id("loginpassword")).sendKeys("admin");
-	      driver.findElement(By.xpath("//button[text()='Log in']")).click();
+	    	driver.findElement(By.id("login2")).click();
+	    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
+	    	driver.findElement(By.id("loginusername")).sendKeys("admin");
+	    	driver.findElement(By.id("loginpassword")).sendKeys("admin");
+	    	driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	      WebElement logout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout2")));
 	      boolean isVisible = logout.isDisplayed();
 	      System.out.println("Logout visible: " + isVisible);
 	      Assert.assertTrue(isVisible);  
 	    }
 	    
-	    @Test(dependsOnMethods = "validation")
+	    @Test(groups="groupA")
 	    public void invaliduser() {
 	    	driver.findElement(By.id("login2")).click();
 		  	driver.findElement(By.id("loginusername")).sendKeys("hello");
@@ -72,7 +73,7 @@ public class FirstTest {
 		    }
 	    }
 	    
-	    @Test
+	    @Test (groups="groupA")
 	    public void invalidpassword() {
 	    	driver.findElement(By.id("login2")).click();
 		  	driver.findElement(By.id("loginusername")).sendKeys("admin");

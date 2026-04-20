@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.SoftAssertion">
+      <class name="com.test.DemoBlazeDataProvider">
         <methods>
-          <include name="beforeMethod"/>
+          <include name="validation"/>
           <include name="title"/>
+          <include name="invalid"/>
           <include name="after"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.test.SoftAssertion -->
+      </class> <!-- com.test.DemoBlazeDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

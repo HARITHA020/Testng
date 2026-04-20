@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-  <groups>
-        <run>
-             <include name="groupA"></include>
-             <include name="groupB"></include>
-        </run>
-  </groups>
+<suite name="TestNG test Suite">
+   <test thread-count="5" name="Test" parallel="methods">
+     <parameter name="browser" value="chrome"></parameter>
+     <parameter name="url" value="https://demoblaze.com/"></parameter>
+     <parameter name="name" value="admin"></parameter>
+      <parameter name="pass" value="admin"></parameter>
     <classes>
-      <class name="com.test.FirstTest"/>
-      <class name="com.test.GroupsPractice"></class>
+      <class name="com.test.DemoBlazeDataProvider"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
