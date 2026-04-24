@@ -43,7 +43,6 @@ public class Assertion {
 	  Assert.assertSame(str4, str5);
 	  System.out.println("same assertion is succesfull");
 	  
-	  
 	  //check that the value is not same
 	  Assert.assertNotSame(str1, str3);
 	  System.out.println("not same  assertion is succesfull");

@@ -63,7 +63,7 @@ public class parameter {
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
     	driver.findElement(By.id("loginusername")).sendKeys(name);
     	driver.findElement(By.id("loginpassword")).sendKeys(pass);
-    	driver.findElement(By.xpath("//button[text()='Log in']")).click();
+    	driver.findElement(By.xpath("//button[text()='Login']")).click();
       WebElement logout = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout2")));
       boolean isVisible = logout.isDisplayed();
       System.out.println("Logout visible: " + isVisible);
