@@ -18,7 +18,6 @@ import com.util.DHExcel;
 public class LoginTest {
 
 	private static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-
 	@BeforeMethod
 	public void setup() {
 	    System.out.println("Start the test");
@@ -27,8 +26,6 @@ public class LoginTest {
 	    driver1.get("https://www.demoblaze.com/");
 	    driver1.manage().window().maximize();
 	}
-
-
 	@AfterMethod
 	public void tearDown() {
 		WebDriver driver1 = driver.get();
@@ -54,7 +51,6 @@ public class LoginTest {
 	public void Invalid1(String name, String password) {
 		WebDriver driver1 = driver.get();
 		driver1.findElement(By.id("login2")).click();
-
 		WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
 		driver1.findElement(By.id("loginpassword")).sendKeys(password);
@@ -64,6 +60,4 @@ public class LoginTest {
 		alert.accept();
 		System.out.println("Invalid 1 run successful!");
 	}
-
-	
 }
