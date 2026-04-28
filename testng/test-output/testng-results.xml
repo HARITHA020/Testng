@@ -1,67 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-23T19:26:36 IST" name="Default suite" finished-at="2026-04-23T19:26:58 IST" duration-ms="22404">
+  <suite started-at="2026-04-28T10:11:21 IST" name="Default suite" finished-at="2026-04-28T10:11:54 IST" duration-ms="33524">
     <groups>
       <group name="groupA">
-        <method signature="FirstTest.invalidpassword()[pri:0, instance:com.test.FirstTest@47eaca72]" name="invalidpassword" class="com.test.FirstTest"/>
-        <method signature="FirstTest.invaliduser()[pri:0, instance:com.test.FirstTest@47eaca72]" name="invaliduser" class="com.test.FirstTest"/>
-        <method signature="FirstTest.title()[pri:0, instance:com.test.FirstTest@47eaca72]" name="title" class="com.test.FirstTest"/>
-        <method signature="FirstTest.validation()[pri:0, instance:com.test.FirstTest@47eaca72]" name="validation" class="com.test.FirstTest"/>
+        <method signature="listener1.invalidpassword()[pri:0, instance:com.test.listener1@235834f2]" name="invalidpassword" class="com.test.listener1"/>
+        <method signature="listener1.invaliduser()[pri:0, instance:com.test.listener1@235834f2]" name="invaliduser" class="com.test.listener1"/>
+        <method signature="listener1.title()[pri:0, instance:com.test.listener1@235834f2]" name="title" class="com.test.listener1"/>
+        <method signature="listener1.validation()[pri:0, instance:com.test.listener1@235834f2]" name="validation" class="com.test.listener1"/>
       </group> <!-- groupA -->
     </groups>
-    <test started-at="2026-04-23T19:26:36 IST" name="Default test" finished-at="2026-04-23T19:26:58 IST" duration-ms="22404">
-      <class name="com.test.FirstTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:36 IST" name="beforeMethod" finished-at="2026-04-23T19:26:41 IST" duration-ms="4758" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidpassword()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:41 IST" name="invalidpassword" finished-at="2026-04-23T19:26:43 IST" duration-ms="2125" status="PASS">
+    <test started-at="2026-04-28T10:11:21 IST" name="Default test" finished-at="2026-04-28T10:11:54 IST" duration-ms="33524">
+      <class name="com.test.listener1">
+        <test-method signature="invalidpassword()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:21 IST" name="invalidpassword" finished-at="2026-04-28T10:11:28 IST" duration-ms="7026" status="FAIL">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[unexpected alert open: {Alert text : Please fill out Username and Password.}
+  (Session info: chrome=147.0.7727.102): Please fill out Username and Password.
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a500471ee6069151dd49195352d97eec, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\HARITHA\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50818}, goog:processID: 30820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50818/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a500471ee6069151dd49195352d97eec]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please fill out Username and Password.}
+  (Session info: chrome=147.0.7727.102): Please fill out Username and Password.
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a500471ee6069151dd49195352d97eec, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\HARITHA\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50818}, goog:processID: 30820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50818/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a500471ee6069151dd49195352d97eec
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:690)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:393)
+at com.test.listenerScreenshot.captureScreenshot(listenerScreenshot.java:14)
+at com.test.listener.onTestFailure(listener.java:18)
+at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)
+at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:787)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidpassword -->
-        <test-method is-config="true" signature="after()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:43 IST" name="after" finished-at="2026-04-23T19:26:43 IST" duration-ms="435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:43 IST" name="beforeMethod" finished-at="2026-04-23T19:26:46 IST" duration-ms="3179" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:21 IST" name="beforeMethod" finished-at="2026-04-28T10:11:27 IST" duration-ms="6071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invaliduser()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:46 IST" name="invaliduser" finished-at="2026-04-23T19:26:48 IST" duration-ms="1959" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:28 IST" name="beforeMethod" finished-at="2026-04-28T10:11:34 IST" duration-ms="5288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invaliduser()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:34 IST" name="invaliduser" finished-at="2026-04-28T10:11:36 IST" duration-ms="2603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invaliduser -->
-        <test-method is-config="true" signature="after()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:48 IST" name="after" finished-at="2026-04-23T19:26:49 IST" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:36 IST" name="after" finished-at="2026-04-28T10:11:37 IST" duration-ms="676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:49 IST" name="beforeMethod" finished-at="2026-04-23T19:26:51 IST" duration-ms="2723" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:37 IST" name="beforeMethod" finished-at="2026-04-28T10:11:43 IST" duration-ms="6454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="title()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:51 IST" name="title" finished-at="2026-04-23T19:26:51 IST" duration-ms="36" status="PASS">
+        <test-method signature="title()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:43 IST" name="title" finished-at="2026-04-28T10:11:43 IST" duration-ms="26" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [STORES] but found [STORE]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [STORES] but found [STORE]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.test.listener1.title(listener1.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- title -->
-        <test-method is-config="true" signature="after()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:51 IST" name="after" finished-at="2026-04-23T19:26:52 IST" duration-ms="296" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:44 IST" name="after" finished-at="2026-04-28T10:11:45 IST" duration-ms="1155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:52 IST" name="beforeMethod" finished-at="2026-04-23T19:26:54 IST" duration-ms="2438" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:45 IST" name="beforeMethod" finished-at="2026-04-28T10:11:50 IST" duration-ms="5323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validation()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:54 IST" name="validation" finished-at="2026-04-23T19:26:58 IST" duration-ms="3704" status="PASS">
+        <test-method signature="validation()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:50 IST" name="validation" finished-at="2026-04-28T10:11:54 IST" duration-ms="3561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validation -->
-        <test-method is-config="true" signature="after()[pri:0, instance:com.test.FirstTest@47eaca72]" started-at="2026-04-23T19:26:58 IST" name="after" finished-at="2026-04-23T19:26:58 IST" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:com.test.listener1@235834f2]" started-at="2026-04-28T10:11:54 IST" name="after" finished-at="2026-04-28T10:11:54 IST" duration-ms="511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-      </class> <!-- com.test.FirstTest -->
+      </class> <!-- com.test.listener1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

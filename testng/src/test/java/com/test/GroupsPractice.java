@@ -17,10 +17,12 @@ public class GroupsPractice {
   public void method3() {
 	  System.out.println("menthod 3 for the group B");
   }
+  
   @Test(dependsOnGroups="groupA")
   public void methodgroup() {
 	  System.out.println("running the dependent test");
   }
+   
   @Test
   public void demo() {
 	  
