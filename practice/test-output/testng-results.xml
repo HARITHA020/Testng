@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-28T16:39:41 IST" name="Default suite" finished-at="2026-04-28T16:39:54 IST" duration-ms="13076">
+  <suite started-at="2026-04-28T23:19:27 IST" name="Suite" finished-at="2026-04-28T23:19:49 IST" duration-ms="21780">
     <groups>
     </groups>
-    <test started-at="2026-04-28T16:39:41 IST" name="Default test" finished-at="2026-04-28T16:39:54 IST" duration-ms="13076">
-      <class name="com.test.LoginTest">
-        <test-method is-config="true" signature="start()[pri:0, instance:com.test.LoginTest@5b12b668]" started-at="2026-04-28T16:39:41 IST" name="start" finished-at="2026-04-28T16:39:50 IST" duration-ms="9205" status="PASS">
+    <test started-at="2026-04-28T23:19:27 IST" name="Test" finished-at="2026-04-28T23:19:49 IST" duration-ms="21780">
+      <class name="com.test.CommonTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.test.CommonTest@5b12b668]" started-at="2026-04-28T23:19:27 IST" name="start" finished-at="2026-04-28T23:19:34 IST" duration-ms="6691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method signature="login()[pri:0, instance:com.test.LoginTest@5b12b668]" started-at="2026-04-28T16:39:50 IST" name="login" finished-at="2026-04-28T16:39:54 IST" duration-ms="3280" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.test.CommonTest@5b12b668]" started-at="2026-04-28T23:19:34 IST" name="test" finished-at="2026-04-28T23:19:48 IST" duration-ms="14167" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="stop()[pri:0, instance:com.test.LoginTest@5b12b668]" started-at="2026-04-28T16:39:54 IST" name="stop" finished-at="2026-04-28T16:39:54 IST" duration-ms="470" status="PASS">
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="stop()[pri:0, instance:com.test.CommonTest@5b12b668]" started-at="2026-04-28T23:19:48 IST" name="stop" finished-at="2026-04-28T23:19:49 IST" duration-ms="801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stop -->
-      </class> <!-- com.test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.test.CommonTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
