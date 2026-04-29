@@ -16,9 +16,17 @@ public class CommonTest extends MainTest{
   @Test
   public void logintest() {
 	  logpage = new DemoLoginPage(driver);
-	  logpage.logintest("admin", "admins");
-	 // failed=logpage.passwordfield();
-	  Assert.fail("Login failed");
+	  logpage.logintest("admin", "admin");
+	 // failed=logpage.passwordfield(); //only use for element screenshot
+	  try {
+	        String alertText = driver.switchTo().alert().getText();
+	        driver.switchTo().alert().accept();
+
+	        Assert.fail("Login failed: " + alertText); 
+
+	    } catch (Exception e) {
+	        System.out.println("Login successful");
+	    }
   }
   @Test(dependsOnMethods="logintest")
   public void hometest() {
