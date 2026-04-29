@@ -11,6 +11,7 @@ public class listener implements ITestListener {
         System.out.println("Test Failed: " + result.getName());
         Object currentClass = result.getInstance();
         WebDriver driver = ((listener1) currentClass).driver;
+        
         listenerScreenshot.captureScreenshot(driver, result.getName());
     }
 }
