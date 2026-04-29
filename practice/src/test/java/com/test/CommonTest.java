@@ -1,23 +1,28 @@
 package com.test;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.pages.CartPage;
 import com.pages.DemoLoginPage;
 import com.pages.HomePage;
-import com.pages.productPage;
+import com.pages.productPage;import org.testng.annotations.Listeners;
+
+@Listeners(com.test.listener.class)
 
 public class CommonTest extends MainTest{
+	WebElement failed;
   @Test
-  public void test() {
+  public void logintest() {
 	  logpage = new DemoLoginPage(driver);
+	  logpage.logintest("admin", "admins");
+	 // failed=logpage.passwordfield();
+	  Assert.fail("Login failed");
+  }
+  @Test(dependsOnMethods="logintest")
+  public void hometest() {
 	  home = new HomePage(driver);
-      product=new productPage(driver);
-	  cart=new CartPage(driver);
-	  
-	  logpage.logintest("admin", "admin");
-	  
 	  home.waitForLogout(wait);
 	  Assert.assertTrue(home.logout(), "Login failed - Logout not visible");
 	  home.clicklap();
@@ -26,15 +31,21 @@ public class CommonTest extends MainTest{
 	  System.out.println(home.macText());
 	  home.clickMac();
 	  
-	  
+  }
+  @Test(dependsOnMethods="hometest")
+  public void productTest() {
+	  product=new productPage(driver);
 	  product.waitFortitle(wait);
 	  System.out.println(product.lapTittle());
 	  product.clickcart(wait);
 	  product.clickcartlink();
-	  
+  }
+  @Test(dependsOnMethods="productTest")
+  public void cartTest() {
+
+	  cart=new CartPage(driver);
 	  cart.place();
-	 cart.order("haritha", "india", "salem", "123455", "jan", "2026");
-	 System.out.println( cart.getOrderId());
-	  
+	  cart.order("haritha", "india", "salem", "123455", "jan", "2026");
+	  System.out.println( cart.getOrderId());
   }
 }

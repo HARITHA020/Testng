@@ -14,7 +14,9 @@ import com.pages.DemoLoginPage;
 import com.pages.HomePage;
 import com.pages.productPage;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 
 
 
@@ -25,7 +27,7 @@ public class MainTest {
 	DemoLoginPage logpage;
 	productPage product;
 	CartPage cart;
-	 @BeforeMethod
+	 @BeforeClass
 	    public void start() {
 	        System.out.println("Start the test ");
 
@@ -38,7 +40,7 @@ public class MainTest {
 	        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    }
 
-	    @AfterMethod
+	    @AfterClass
 	    public void stop() {
 	        driver.quit();
 	    }

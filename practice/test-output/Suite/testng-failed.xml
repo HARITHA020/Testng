@@ -3,27 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.HomeTest">
+      <class name="com.test.CommonTest">
         <methods>
-          <include name="stop"/>
-          <include name="Home"/>
-          <include name="start"/>
-        </methods>
-      </class> <!-- com.test.HomeTest -->
-      <class name="com.test.ProductTest">
-        <methods>
-          <include name="product"/>
+          <include name="test"/>
           <include name="stop"/>
           <include name="start"/>
         </methods>
-      </class> <!-- com.test.ProductTest -->
-      <class name="com.test.cartTest">
-        <methods>
-          <include name="cart"/>
-          <include name="stop"/>
-          <include name="start"/>
-        </methods>
-      </class> <!-- com.test.cartTest -->
+      </class> <!-- com.test.CommonTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

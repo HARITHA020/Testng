@@ -22,6 +22,12 @@ public class DemoLoginPage extends MainPage {
 	@FindBy(xpath="//button[text()='Log in']")
 	WebElement loginbtn;
 	
+	@FindBy(xpath="(//div[@class=\"modal-body\"])[3]/form/div[2]")
+	WebElement passwordwrong;
+	public WebElement passwordfield() {
+		return passwordwrong;
+	}
+	
 	public void logintest(String name, String pass) {
 		loginlink.click();
 		username.sendKeys(name);
