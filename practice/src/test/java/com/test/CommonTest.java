@@ -16,7 +16,7 @@ public class CommonTest extends MainTest{
   @Test
   public void logintest() {
 	  logpage = new DemoLoginPage(driver);
-	  logpage.logintest("admin", "admin");
+	  logpage.logintest("admin", "admins");
 	 // failed=logpage.passwordfield(); //only use for element screenshot
 	  try {
 	        String alertText = driver.switchTo().alert().getText();
