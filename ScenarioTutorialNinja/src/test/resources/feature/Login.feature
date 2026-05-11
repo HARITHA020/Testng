@@ -11,9 +11,9 @@ Scenario Outline: Login with invalid credentials
 
 Examples:
 | email                  | password | warningMessage                                        |
-| priya@gmail.com        | sow@123  | Warning: No match for E-Mail Address and/or Password. |
+| priya@gmail.com        | pri@123  | Warning: No match for E-Mail Address and/or Password. |
 |                        |          | Warning: No match for E-Mail Address and/or Password. |
-| priya123@gmail.com     | sow@911  | Warning: No match for E-Mail Address and/or Password. |
+| priya123@gmail.com     | pri@911  | Warning: No match for E-Mail Address and/or Password. |
 
 
 @ValidLogin
@@ -27,4 +27,4 @@ Scenario Outline: Login with valid credentials
 
 Examples:
 | email              | password  |
-| sowndariya@gmail.com | Sow@911!  |
+| haritharavichandran11@gmail.com | haritha@20  |

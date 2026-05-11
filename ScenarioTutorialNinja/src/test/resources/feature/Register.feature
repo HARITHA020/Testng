@@ -7,7 +7,7 @@ Scenario: Register with valid user details - DataTable without header
   And User click on My Account Link
   And User click on Register button
   When User enters valid registration details
-    | sowndariya | K | sowndariya@gmail.com | 9876543210 | Sow@911! | Sow@911! |
+    | Haritha | SR | haritharavichandran11@gmail.com | 9790619041 | haritha@20| Haritha@20 |
   And User selects privacy policy checkbox
   And User clicks on continue button
   Then User account should be created successfully
@@ -21,7 +21,7 @@ Scenario: Register with already registered email
   And User click on Register button
 
   When User enters valid registration details
-    | sowndariya | K | sowndariya@gmail.com | 9876543210 | Sow@911! | Sow@911! |
+    | Haritha | SR | haritharavichandran11@gmail.com | 9790619041 | haritha@20| Haritha@20 |
 
   And User selects privacy policy checkbox
   And User clicks on continue button
