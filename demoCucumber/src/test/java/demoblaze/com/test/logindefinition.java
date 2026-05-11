@@ -17,8 +17,8 @@ import io.cucumber.java.en.*;
 
 public class logindefinition {
 
-    WebDriver driver;
-    WebDriverWait wait;
+	WebDriver driver = Hooks.driver;
+	WebDriverWait wait = Hooks.wait;
     @Before
     public void setup() {
     	System.out.println("=========before executing=========");
